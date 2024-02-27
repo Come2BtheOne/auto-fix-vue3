@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./dist/es/css/index.css" /> -->
+    <title>rollup-demo</title>
+  </head>
+  <body>
+    <div id="app">Rollup</div>
+    <!-- 测试es module模块 -->
+    <script type="module">
+      import { useAutoFix } from './dist/es/index.js'
+      const { canvasStyle, canvasWidth, canvasHeight } = useAutoFix()
+      console.log(canvasStyle)
+    </script>
+    <!-- 测试umd模块 -->
+    <script src="./dist/umd/index.js"></script>
+    <script>
+      console.log(window.autoFix)
+    </script>
+  </body>
+</html>

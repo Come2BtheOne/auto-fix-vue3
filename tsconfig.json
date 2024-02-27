@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "declaration": true, //生成声明文件
+    "outDir": "dist",
+    "rootDir": "src",
+    "strictFunctionTypes": true,
+    "noImplicitAny": true,
+    "noImplicitThis": false
+  },
+  "include": ["src/**/*", "src/**/*.vue", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}
