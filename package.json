@@ -1,6 +1,7 @@
 {
   "name": "@zr/auto-fix-vue3",
   "version": "1.0.0",
+  "types": "dist/es/index.d.ts",
   "main": "dist/cjs",
   "module": "dist/es",
   "browser": "dist/umd/index.js",
@@ -19,6 +20,7 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "@vue/compiler-sfc": "^3.4.20",
     "autoprefixer": "^10.4.17",
     "rimraf": "^5.0.5",
     "rollup": "^4.12.0",

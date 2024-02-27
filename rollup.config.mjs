@@ -27,18 +27,27 @@ export default defineConfig([
       {
         dir: pkg.main, //出口文件
         format: 'cjs', //打包成CommonJS模块
-        sourcemap: true
+        sourcemap: true,
+        globals: {
+          vue: 'Vue'
+        }
       },
       {
         dir: pkg.module, //出口文件
         format: 'es', //打包成es module模块
-        sourcemap: true
+        sourcemap: true,
+        globals: {
+          vue: 'Vue'
+        }
       },
       {
         name: 'autoFix', //打包成UMD模式，需提供name
         file: pkg.browser, //出口文件,umd不支持代码分割  import()
         format: 'umd', //打包成UMD模块
-        sourcemap: true
+        sourcemap: true,
+        globals: {
+          vue: 'Vue'
+        }
       }
     ],
     external: ['vue'], // 依赖模块

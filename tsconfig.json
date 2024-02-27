@@ -8,11 +8,21 @@
     "target": "ESNext",
     "moduleResolution": "node",
     "declaration": true, //生成声明文件
+    "declarationDir": "dist/types",
     "outDir": "dist",
     "rootDir": "src",
     "strictFunctionTypes": true,
     "noImplicitAny": true,
-    "noImplicitThis": false
+    "noImplicitThis": false,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": ["src/**/*", "src/**/*.vue", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist"]

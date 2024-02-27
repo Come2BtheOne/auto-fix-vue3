@@ -18,6 +18,11 @@ export interface Props {
   width?: number
   height?: number
 }
+
+defineOptions({
+  name: 'FullScreenContainer'
+})
+
 const props = withDefaults(defineProps<Props>(), {
   width: 1920,
   height: 1080
