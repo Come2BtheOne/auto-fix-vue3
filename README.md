@@ -34,7 +34,7 @@ yarn add @jizirui/auto-fix-vue3
 ### ESM
 
 ```js
-import { FullScreenContainer } from 'auto-fix-vue3'
+import { FullScreenContainer } from '@jizirui/auto-fix-vue3'
 ```
 
 ### CommonJS
