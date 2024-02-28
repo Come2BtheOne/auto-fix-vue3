@@ -1,5 +1,6 @@
 {
-  "name": "@zr/auto-fix-vue3",
+  "name": "@jizirui/auto-fix-vue3",
+  "author": "jizirui <582271833@qq.com>",
   "version": "1.0.0",
   "types": "dist/es/index.d.ts",
   "main": "dist/cjs",
@@ -31,6 +32,9 @@
     "sass": "^1.71.0",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
   },
   "dependencies": {
     "vue": "^3.4.20"
