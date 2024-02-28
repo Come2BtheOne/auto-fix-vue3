@@ -75,3 +75,31 @@ import { FullScreenContainer } from 'auto-fix-vue3'
   ...
 </full-screen-container>
 ```
+
+### UMD
+
+```html
+<div id="app">
+  <full-screen-container>
+    <div>{{ message }}</div>
+  </full-screen-container>
+</div>
+
+<script src="https://unpkg.com/vue@>3.2.0/dist/vue.global.js"></script>
+<script src="./node_modules/@jizirui/auto-fix-vue3/dist/umd/index.js"></script>
+<script>
+  const { createApp, ref } = Vue
+
+  // 创建 Vue 实例
+  createApp({
+    setup() {
+      const message = ref('Hello vue!')
+      return {
+        message
+      }
+    }
+  })
+    .component('full-screen-container', window.autoFix.FullScreenContainer)
+    .mount('#app')
+</script>
+```
