@@ -2,7 +2,7 @@
   "name": "@jizirui/auto-fix-vue3",
   "author": "jizirui <582271833@qq.com>",
   "description": "vue3大屏适配方案",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "types": "dist/es/index.d.ts",
   "main": "dist/cjs",
   "module": "dist/es",
@@ -42,7 +42,6 @@
     "@babel/preset-env": "^7.23.9",
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
@@ -58,6 +57,6 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^3.0.0"
   }
 }

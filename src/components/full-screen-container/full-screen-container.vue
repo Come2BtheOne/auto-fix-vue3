@@ -1,6 +1,6 @@
 <template>
   <div
-    class="auto-fix"
+    class="full-screen-container"
     :style="{
       width: canvasWidth + 'px',
       height: canvasHeight + 'px',
@@ -11,23 +11,28 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import { useAutoFix } from '@/hooks/auto-fix'
 
-export interface Props {
-  width?: number
-  height?: number
+export default {
+  name: 'FullScreenContainer',
+  props: {
+    width: {
+      type: Number,
+      required: true,
+      default: 1920
+    },
+    height: {
+      type: Number,
+      required: true,
+      default: 1080
+    }
+  },
+  setup(props: any) {
+    const { canvasStyle, canvasWidth, canvasHeight } = useAutoFix({ width: props.width, height: props.height })
+    return { canvasStyle, canvasWidth, canvasHeight }
+  }
 }
-
-defineOptions({
-  name: 'FullScreenContainer'
-})
-
-const props = withDefaults(defineProps<Props>(), {
-  width: 1920,
-  height: 1080
-})
-const { canvasStyle, canvasWidth, canvasHeight } = useAutoFix({ width: props.width, height: props.height })
 </script>
 
 <style scoped></style>

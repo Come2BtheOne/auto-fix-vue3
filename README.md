@@ -85,7 +85,7 @@ import { FullScreenContainer } from 'auto-fix-vue3'
   </full-screen-container>
 </div>
 
-<script src="https://unpkg.com/vue@>3.2.0/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./node_modules/@jizirui/auto-fix-vue3/dist/umd/index.js"></script>
 <script>
   const { createApp, ref } = Vue

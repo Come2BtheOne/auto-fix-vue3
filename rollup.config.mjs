@@ -7,7 +7,6 @@ import { babel } from '@rollup/plugin-babel'
 import json from '@rollup/plugin-json'
 import terser from '@rollup/plugin-terser'
 import resolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
 import alias from '@rollup/plugin-alias'
 import vue3 from 'rollup-plugin-vue'
 import typescript from 'rollup-plugin-typescript2'
@@ -27,18 +26,12 @@ export default defineConfig([
       {
         dir: pkg.main, //出口文件
         format: 'cjs', //打包成CommonJS模块
-        sourcemap: true,
-        globals: {
-          vue: 'Vue'
-        }
+        sourcemap: true
       },
       {
         dir: pkg.module, //出口文件
         format: 'es', //打包成es module模块
-        sourcemap: true,
-        globals: {
-          vue: 'Vue'
-        }
+        sourcemap: true
       },
       {
         name: 'autoFix', //打包成UMD模式，需提供name
@@ -75,11 +68,6 @@ export default defineConfig([
        * @rollup/plugin-node-resolve：处理外部依赖，将其打包进来
        */
       resolve(),
-      /**
-       * @rollup/plugin-commonjs：将第三方包CommonJS转ES
-       * 如果使用了@rollup/plugin-commonjs，@rollup/plugin-commonjs一定要在@rollup/plugin-babel之前调用
-       */
-      commonjs(),
       /**
        * @rollup/plugin-alias：路径别名
        */
