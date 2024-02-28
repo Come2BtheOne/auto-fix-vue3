@@ -13,8 +13,9 @@
 
 <script lang="ts">
 import { useAutoFix } from '@/hooks/auto-fix'
+import { defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   name: 'FullScreenContainer',
   props: {
     width: {
@@ -32,7 +33,7 @@ export default {
     const { canvasStyle, canvasWidth, canvasHeight } = useAutoFix({ width: props.width, height: props.height })
     return { canvasStyle, canvasWidth, canvasHeight }
   }
-}
+})
 </script>
 
 <style scoped></style>

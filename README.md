@@ -29,24 +29,54 @@ yarn add @jizirui/auto-fix-vue3
 
 ---
 
-## 使用方式
+## 引入方式
 
-### Hook 写法
+### ESM
 
 ```js
-// JavaScript 代码
-import { useAutoFix } from 'auto-fix-vue3'
+import { FullScreenContainer } from 'auto-fix-vue3'
+```
 
-const { canvasStyle, canvasWidth, canvasHeight } = useAutoFix({
+### CommonJS
+
+```js
+const { useAutoFix, FullScreenContainer } = require('@jizirui/auto-fix-vue3')
+```
+
+### UMD
+
+```js
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./node_modules/@jizirui/auto-fix-vue3/dist/umd/index.js"></script>
+<script>
+  const { createApp } = Vue
+  const { canvasStyle, canvasWidth, canvasHeight } = window.autoFix.useAutoFix({
   width: 1920, //设计图宽度
   height: 1080 //设计图高度
 })
+
+  // 创建 Vue 实例
+  createApp().component('full-screen-container', window.autoFix.FullScreenContainer).mount('#app')
+</script>
 ```
 
-```html
-<!-- HTML 代码 -->
+---
 
-<!-- 用一个div包裹你的html代码 -->
+## HTML 部分
+
+```html
+<!-- 组件形式 -->
+<full-screen-container :width="1920" :height="1080">
+  <div>柱状图</div>
+  <div>饼图</div>
+  ...
+</full-screen-container>
+```
+
+或
+
+```html
+<!-- Hook -->
 <div
   :style="{
     width: canvasWidth + 'px',
@@ -58,48 +88,4 @@ const { canvasStyle, canvasWidth, canvasHeight } = useAutoFix({
   <div>饼图</div>
   ...
 </div>
-```
-
-### 组件形式
-
-```js
-// JavaScript 代码
-import { FullScreenContainer } from 'auto-fix-vue3'
-```
-
-```html
-<!-- HTML 代码 -->
-<full-screen-container>
-  <div>柱状图</div>
-  <div>饼图</div>
-  ...
-</full-screen-container>
-```
-
-### UMD
-
-```html
-<div id="app">
-  <full-screen-container>
-    <div>{{ message }}</div>
-  </full-screen-container>
-</div>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="./node_modules/@jizirui/auto-fix-vue3/dist/umd/index.js"></script>
-<script>
-  const { createApp, ref } = Vue
-
-  // 创建 Vue 实例
-  createApp({
-    setup() {
-      const message = ref('Hello vue!')
-      return {
-        message
-      }
-    }
-  })
-    .component('full-screen-container', window.autoFix.FullScreenContainer)
-    .mount('#app')
-</script>
 ```
