@@ -1,4 +1,20 @@
-# auto-fix-vue3 （大屏适配方案） [![NPM Version][npm-image]][npm-url] [![NPM Size][size-image]][size-url] [![NPM Download][downloads-image]][downloads-url]
+# auto-fix-vue3 （大屏自适应容器） [![NPM Version][npm-image]][npm-url] [![NPM Size][size-image]][size-url] [![NPM Download][downloads-image]][downloads-url]
+
+<h1 align="center">auto-fix-vue3 （大屏自适应容器）</h1>
+<p align="center">
+  <a href="https://npmjs.org/package/@jizirui/auto-fix-vue3">
+    <img src="https://img.shields.io/npm/v/@jizirui/auto-fix-vue3.svg" alt="LICENSE" />
+  </a>
+  <a href="https://npmjs.org/package/@jizirui/auto-fix-vue3">
+    <img src="https://img.shields.io/bundlephobia/min/@jizirui/auto-fix-vue3.svg" alt="LICENSE" />
+  </a>
+  <a href="https://github.com/Come2BtheOne/auto-fix-vue3/releases">
+    <img src="https://img.shields.io/github/release/Come2BtheOne/auto-fix-vue3.svg" alt="LICENSE" />
+  </a>  
+  <a href="https://github.com/Come2BtheOne/auto-fix-vue3">
+    <img src="https://img.shields.io/github/stars/Come2BtheOne/auto-fix-vue3.svg" alt="LICENSE" />
+  </a>
+</p>
 
 [size-image]: https://badgen.net/bundlephobia/minzip/@jizirui/auto-fix-vue3
 [size-url]: https://bundlephobia.com/result?p=@jizirui/auto-fix-vue3
@@ -6,6 +22,8 @@
 [npm-url]: https://npmjs.org/package/@jizirui/auto-fix-vue3
 [downloads-image]: https://badgen.net/npm/dt/auto-fix-vue3
 [downloads-url]: https://npmjs.org/package/@jizirui/auto-fix-vue3
+
+[React 项目看这边](https://github.com/Come2BtheOne/auto-fix-react)
 
 ## 安装
 
@@ -40,7 +58,7 @@ import { FullScreenContainer } from '@jizirui/auto-fix-vue3'
 ### CommonJS
 
 ```js
-const { useAutoFix, FullScreenContainer } = require('@jizirui/auto-fix-vue3')
+const { useAutoFix, FullScreenContainer } = require('@jizirui/auto-fix-vue3/dist/cjs')
 ```
 
 ### UMD

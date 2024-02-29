@@ -1,5 +1,4 @@
-//@ts-ignore
-import { ref, reactive, watchEffect } from 'vue'
+import { ref, reactive, onMounted, onBeforeUnmount } from 'vue'
 
 interface IOptions {
   /**
@@ -18,7 +17,7 @@ export function useAutoFix(options: IOptions = { width: 1920, height: 1080 }) {
   const canvasWidth = ref(options.width)
   const canvasHeight = ref(options.height)
 
-  // 4.整体等比例缩放
+  // 整体等比例缩放
   const canvasStyle = reactive({
     transform: 'scale(1, 1)',
     transformOrigin: `left top`
@@ -58,8 +57,8 @@ export function useAutoFix(options: IOptions = { width: 1920, height: 1080 }) {
 
   // 复位
   const reset = () => {
-    canvasWidth.value = 1920
-    canvasHeight.value = 1080
+    canvasWidth.value = options.width
+    canvasHeight.value = options.height
     canvasStyle.transform = 'scale(1, 1)'
     canvasStyle.transformOrigin = `left top`
   }
@@ -68,11 +67,14 @@ export function useAutoFix(options: IOptions = { width: 1920, height: 1080 }) {
     reset()
     equalScale()
   }
-  watchEffect(() => {
+
+  onMounted(() => {
     fit()
+    window.addEventListener('resize', fit)
   })
-  window.addEventListener('resize', () => {
-    fit()
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('resize', fit)
   })
 
   return {

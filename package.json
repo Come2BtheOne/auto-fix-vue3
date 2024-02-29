@@ -1,8 +1,8 @@
 {
   "name": "@jizirui/auto-fix-vue3",
   "author": "jizirui <582271833@qq.com>",
-  "description": "vue3大屏适配方案",
-  "version": "1.0.6",
+  "description": "vue3大屏自适应容器",
+  "version": "1.0.7",
   "types": "dist/es/index.d.ts",
   "main": "dist/cjs",
   "module": "dist/es",
@@ -11,7 +11,8 @@
   "keywords": [
     "vue3",
     "大屏适配",
-    "自适应大屏"
+    "自适应大屏",
+    "大屏自适应容器"
   ],
   "browserslist": [
     "defaults",
