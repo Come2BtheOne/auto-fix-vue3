@@ -2,7 +2,7 @@
   "name": "@jizirui/auto-fix-vue3",
   "author": "jizirui <582271833@qq.com>",
   "description": "vue3大屏自适应容器",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "types": "dist/es/index.d.ts",
   "main": "dist/cjs",
   "module": "dist/es",
