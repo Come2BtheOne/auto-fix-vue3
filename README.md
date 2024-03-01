@@ -22,7 +22,7 @@
   <a style="color:#f73859;" href="https://github.com/Come2BtheOne/auto-fix-react">React 项目看这边</a>
 </p>
 
-<h2>安装</h2>
+<h2 style="border: none">安装</h2>
 
 ### npm
 
@@ -44,7 +44,7 @@ yarn add @jizirui/auto-fix-vue3
 
 ---
 
-<h2>引入方式</h2>
+<h2 style="border: none">引入方式</h2>
 
 ### ESM
 
@@ -77,7 +77,7 @@ const { useAutoFix, FullScreenContainer } = require('@jizirui/auto-fix-vue3/dist
 
 ---
 
-<h2>HTML 部分</h2>
+<h2 style="border: none">HTML 部分</h2>
 
 ```html
 <!-- 组件形式 -->
