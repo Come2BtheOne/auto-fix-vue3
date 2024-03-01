@@ -1,6 +1,6 @@
 <h1 align="center">auto-fix-vue3 （大屏自适应容器）</h1>
 <div align="center">
- <a href="https://vuejs.org">
+  <a href="https://vuejs.org">
     <img src="https://img.shields.io/badge/vue-%3E=3.0.0-green.svg?logo=vuedotjs&style=flat&colorA=084c61&colorB=f73859" alt="Vue3" />
   </a>
   <a href="https://npmjs.org/package/@jizirui/auto-fix-vue3">
@@ -22,29 +22,29 @@
   <a style="color:#f73859;" href="https://github.com/Come2BtheOne/auto-fix-react">React 项目看这边</a>
 </p>
 
-## 安装
+<h2>安装</h2>
 
 ### npm
 
-```js
+```bash
 npm install @jizirui/auto-fix-vue3
 ```
 
 ### pnpm
 
-```js
+```bash
 pnpm add @jizirui/auto-fix-vue3
 ```
 
 ### yarn
 
-```js
+```bash
 yarn add @jizirui/auto-fix-vue3
 ```
 
 ---
 
-## 引入方式
+<h2>引入方式</h2>
 
 ### ESM
 
@@ -60,15 +60,15 @@ const { useAutoFix, FullScreenContainer } = require('@jizirui/auto-fix-vue3/dist
 
 ### UMD
 
-```js
+```html
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="https://unpkg.com/@jizirui/auto-fix-vue3/dist/umd/index.js"></script>
 <script>
   const { createApp } = Vue
   const { canvasStyle, canvasWidth, canvasHeight } = window.autoFix.useAutoFix({
-  width: 1920, //设计图宽度
-  height: 1080 //设计图高度
-})
+    width: 1920, //设计图宽度
+    height: 1080 //设计图高度
+  })
 
   // 创建 Vue 实例
   createApp().component('full-screen-container', window.autoFix.FullScreenContainer).mount('#app')
@@ -77,7 +77,7 @@ const { useAutoFix, FullScreenContainer } = require('@jizirui/auto-fix-vue3/dist
 
 ---
 
-### HTML 部分
+<h2>HTML 部分</h2>
 
 ```html
 <!-- 组件形式 -->
