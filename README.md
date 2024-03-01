@@ -62,7 +62,7 @@ const { useAutoFix, FullScreenContainer } = require('@jizirui/auto-fix-vue3/dist
 
 ```js
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="./node_modules/@jizirui/auto-fix-vue3/dist/umd/index.js"></script>
+<script src="https://unpkg.com/@jizirui/auto-fix-vue3/dist/umd/index.js"></script>
 <script>
   const { createApp } = Vue
   const { canvasStyle, canvasWidth, canvasHeight } = window.autoFix.useAutoFix({
